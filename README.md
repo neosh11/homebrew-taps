@@ -9,9 +9,20 @@ brew tap neosh11/taps
 brew install neosh11/taps/visa-jobs-mcp
 ```
 
+## MCP Formula Namespace
+
+Formula files are organized under `Formula/mcp/`.
+
+Install commands stay flat by formula name:
+- `brew install neosh11/taps/visa-jobs-mcp`
+- `brew install neosh11/taps/freelancer-mcp`
+
 ## Available formulae
 
-- `visa-jobs-mcp`
+- `visa-jobs-mcp` (current)
+
+`freelancer-mcp` formula is generated/updated automatically by
+`freelancer-mcp` release workflow once tag releases are published.
 
 After install:
 
@@ -28,10 +39,8 @@ brew upgrade neosh11/taps/visa-jobs-mcp
 
 ## Maintainers
 
-When updating `visa-jobs-mcp`:
-1. Verify assets exist for both architectures:
-   - `visa-jobs-mcp-vX.Y.Z-macos-arm64.tar.gz`
-   - `visa-jobs-mcp-vX.Y.Z-macos-x86_64.tar.gz`
-2. Fetch checksums from corresponding `.sha256` files.
-3. Update `Formula/visa-jobs-mcp.rb` (`version`, URLs, SHA256s).
+When updating formulae:
+1. Verify release assets exist for required architectures.
+2. Fetch checksums from corresponding `.sha256` files or release digest metadata.
+3. Update `Formula/mcp/<formula>.rb` (`version`, URLs, SHA256s).
 4. Commit and push this tap repo.

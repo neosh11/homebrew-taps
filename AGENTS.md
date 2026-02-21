@@ -17,6 +17,11 @@ Code guide for contributors and coding agents working in `homebrew-taps`.
 - Prefer using a GitHub MCP server for GitHub interactions (releases, tags, assets, metadata) when available.
 - Use GitHub MCP outputs as the source of truth before changing formula versions or release URLs.
 
+## Formula layout
+- Organize MCP formula files under `Formula/mcp/`.
+- Homebrew install names remain flat: `neosh11/taps/<formula-name>`.
+- Keep one formula file per MCP binary, named `<formula-name>.rb`.
+
 ## Release update rules
 - Use versioned release URLs from source app repositories only.
 - Do not use moving `latest` URLs with fixed checksums.
@@ -24,6 +29,7 @@ Code guide for contributors and coding agents working in `homebrew-taps`.
   - `visa-jobs-mcp-vX.Y.Z-macos-arm64.tar.gz`
   - `visa-jobs-mcp-vX.Y.Z-macos-x86_64.tar.gz`
 - If a newer tag exists but assets are missing, keep formula pinned to the latest fully published release.
+- `freelancer-mcp` is updated by CI from the source repository release workflow.
 
 ## Formula checklist
 1. Bump `version` in each changed formula.
@@ -31,7 +37,7 @@ Code guide for contributors and coding agents working in `homebrew-taps`.
 3. Keep install logic compatible with both onefile and onedir release layouts.
 4. Run:
 ```bash
-brew install --build-from-source ./Formula/<formula>.rb
+brew install --build-from-source ./Formula/mcp/<formula>.rb
 brew test <formula>
 ```
 
