@@ -6,7 +6,7 @@
 
 ## Context
 
-`good-mcps` is moving from a pure Homebrew tap role into a platform role that can host shared local UX and settings across multiple MCP servers.
+`homebrew-taps` is moving from a pure Homebrew tap role into a platform role that can host shared local UX and settings across multiple MCP servers.
 
 We need to support:
 
@@ -30,11 +30,11 @@ Adopt a local platform model with these contracts:
 
 ### Storage locations (cross-platform)
 
-Base directory: `os.UserConfigDir()/good-mcps`
+Base directory: `os.UserConfigDir()/homebrew-taps`
 
-- macOS: `$HOME/Library/Application Support/good-mcps`
-- Linux: `$HOME/.config/good-mcps`
-- Windows: `%AppData%\\good-mcps`
+- macOS: `$HOME/Library/Application Support/homebrew-taps`
+- Linux: `$HOME/.config/homebrew-taps`
+- Windows: `%AppData%\\homebrew-taps`
 
 ### Database files
 
@@ -97,7 +97,7 @@ Use file-based local discovery for portability and simplicity.
 
 ### Discovery path
 
-`os.UserConfigDir()/good-mcps/discovery/instances`
+`os.UserConfigDir()/homebrew-taps/discovery/instances`
 
 Each running MCP writes one JSON descriptor:
 

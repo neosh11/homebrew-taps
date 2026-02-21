@@ -1,6 +1,6 @@
 # AGENTS.md
 
-Code guide for contributors and coding agents working in `homebrew-good-mcps`.
+Code guide for contributors and coding agents working in `homebrew-taps`.
 
 ## Purpose
 - This repository maintains Homebrew tap formulae for Neosh MCP servers.
@@ -12,6 +12,10 @@ Code guide for contributors and coding agents working in `homebrew-good-mcps`.
 - Any change to shared shell/data/discovery architecture must update or supersede the relevant ADR.
 - Current baseline architecture ADR:
   - `doc/adr/0001-shared-shell-data-discovery.md`
+
+## GitHub interaction policy
+- Prefer using a GitHub MCP server for GitHub interactions (releases, tags, assets, metadata) when available.
+- Use GitHub MCP outputs as the source of truth before changing formula versions or release URLs.
 
 ## Release update rules
 - Use versioned release URLs from source app repositories only.

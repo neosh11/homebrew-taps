@@ -1,19 +1,12 @@
-# homebrew-good-mcps
+# homebrew-taps
 
 Homebrew tap for Neosh MCP servers.
 
 ## Install
 
 ```bash
-brew tap neosh11/good-mcps
-brew install neosh11/good-mcps/visa-jobs-mcp
-```
-
-For now, the legacy tap also remains supported:
-
-```bash
-brew tap neosh11/visa-jobs-mcp
-brew install neosh11/visa-jobs-mcp/visa-jobs-mcp
+brew tap neosh11/taps
+brew install neosh11/taps/visa-jobs-mcp
 ```
 
 ## Available formulae
@@ -30,7 +23,7 @@ codex mcp add visa-jobs-mcp --env VISA_JOB_SITES=linkedin -- visa-jobs-mcp
 ## Upgrade
 
 ```bash
-brew upgrade neosh11/good-mcps/visa-jobs-mcp
+brew upgrade neosh11/taps/visa-jobs-mcp
 ```
 
 ## Maintainers
