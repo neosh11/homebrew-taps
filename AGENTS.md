@@ -5,6 +5,13 @@ Code guide for contributors and coding agents working in `homebrew-good-mcps`.
 ## Purpose
 - This repository maintains Homebrew tap formulae for Neosh MCP servers.
 - Keep install behavior simple and predictable.
+- This repository also owns cross-MCP platform ADRs (shared shell/data/discovery contracts).
+
+## ADR rules
+- ADRs live under `doc/adr/` and use incremental numeric prefixes (`0001-...`).
+- Any change to shared shell/data/discovery architecture must update or supersede the relevant ADR.
+- Current baseline architecture ADR:
+  - `doc/adr/0001-shared-shell-data-discovery.md`
 
 ## Release update rules
 - Use versioned release URLs from source app repositories only.
